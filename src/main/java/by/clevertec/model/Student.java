@@ -15,4 +15,3 @@ public class Student {
     private String faculty;
     private String group;
 }
-

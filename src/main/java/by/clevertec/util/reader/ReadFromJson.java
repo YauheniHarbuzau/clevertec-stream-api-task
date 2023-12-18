@@ -20,7 +20,6 @@ public class ReadFromJson implements Reader {
     public <T> List<T> getModelData(String fileName, TypeReference<List<T>> typeReference) {
         try {
             return newMapper().readValue(new File(fileName), typeReference);
-
         } catch (IOException e) {
             throw new IOFileException(e.getMessage());
         }
@@ -32,7 +31,6 @@ public class ReadFromJson implements Reader {
         mapper.setDateFormat(DATE_FORMAT);
         mapper.setLocale(Locale.ENGLISH);
         mapper.registerModule(new JavaTimeModule());
-
         return mapper;
     }
 }
